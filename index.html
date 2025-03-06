@@ -5,6 +5,21 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script>
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault(); // Disable right-click
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S")) {
+      e.preventDefault(); // Prevent Ctrl+U (View Source) and Ctrl+S (Save)
+    }
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+      e.preventDefault(); // Prevent F12 (DevTools) and Ctrl+Shift+I
+    }
+  });
+</script>
+
 </head>
 <body>
     <section class="header">
